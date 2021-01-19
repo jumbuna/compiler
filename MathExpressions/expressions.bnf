@@ -1,0 +1,26 @@
+Statement ::= <Expression> ; <Statement>
+
+Expression ::= <Term> <ExpressionPrime>
+
+ExpressionPrime ::= + <Term> <ExpressionPrime>
+ExpressionPrime ::= £
+
+Term ::= <Factor> <TermPrime>
+
+TermPrime ::= * <Factor> <TermPrime>
+
+Factor ::= (Expression)
+Factor ::= <Number>
+
+Number ::= <Digit> <Number>
+
+Digit ::= 0
+Digit ::= 1
+Digit ::= 2
+Digit ::= 3
+Digit ::= 4
+Digit ::= 5
+Digit ::= 6
+Digit ::= 7
+Digit ::= 8
+Digit ::= 9
