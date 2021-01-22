@@ -79,20 +79,20 @@ char *term() {
  * Factor ::= <Number>
  */
 char *factor() {
-    char *tempvar = newvar();
-    if(tempvar == NULL) {
-        logError("Expression is too complex\n");
-        return NULL;
-    }
-    char *tempvar2;
+    char *tempvar;
     if(match(LP)) {
         advance();
-        tempvar2 = expression();
+        tempvar = expression();
         if(!match(RP)) {
             logError("Error line %d: Missing closing `)`.\n", yyLineno);
         }
         advance();
     } else if(match(NUM)) {
+        tempvar = newvar();
+        if(tempvar == NULL) {
+        logError("Expression is too complex\n");
+        return NULL;
+    }
         printf("%s = %.*s\n", tempvar, yyLength, yyText);
         advance();
     } else {

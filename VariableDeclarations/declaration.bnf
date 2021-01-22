@@ -1,0 +1,29 @@
+Declaration ::= <ObjectType> <Identifier> ";" <Declaration>
+Declaration ::= £
+
+ObjectType ::= <Qualifiers> <ObjectType>
+ObjectType ::= <Modifier> <Qualifiers>
+ObjectType ::= <Modifier> <DataType>
+ObjectType ::= <DataType> <Qualifiers>
+ObjectType ::= <DataType> <Modifier>
+
+Qualifiers ::= <Qualifier> <Qualifiers>
+
+Modifier ::= "signed"
+Modifier ::= "unsigned"
+Modifier ::= £
+
+Qualifier ::= "volatile"
+Qualifier ::= "const"
+Qualifier ::= £
+
+DataType ::= "int"
+DataType ::= "char"
+DataType ::= "long"
+DataType ::= "float"
+DataType ::= "double"
+DataType ::= "short"
+DataType ::= £
+
+Identifier ::= <Character> <Identifier>
+Character ::= "[A-z_]"

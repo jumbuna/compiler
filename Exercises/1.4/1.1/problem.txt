@@ -1,0 +1,4 @@
+Write a grammmar that recognizes a C variable declaration
+made up of the following keywords:
+int char long float double signed unsigned short const volatile
+and a variable name.
